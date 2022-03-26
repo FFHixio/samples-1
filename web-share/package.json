@@ -29,6 +29,12 @@
     "firebase-deploy": "firebase deploy --only hosting",
     "rollup": "rollup -c",
     "serve": "firebase serve --only hosting",
-    "workbox": "workbox injectManifest workbox-config.js"
+    "workbox": "workbox injectManifest workbox-config.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
